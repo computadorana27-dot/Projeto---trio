@@ -70,3 +70,5 @@ def menu():
                     break
                 else:
                     print("❌ Opção inválida! Digite 's' ou 'n'.")
+if __name__ == "__main__":
+    menu()
