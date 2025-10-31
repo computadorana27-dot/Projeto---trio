@@ -30,3 +30,18 @@ def menu():
         print("0️⃣  Sair")
 
         opcao = input("\n👉 Escolha uma opção: ").strip()
+        # Opções para admin
+        if perfil == "admin":
+            if opcao == "1":
+                sistema.cadastrar_animal()
+            elif opcao == "2":
+                sistema.remover_animal()
+            elif opcao == "3":
+                sistema.buscar_animal()
+            elif opcao == "4":
+                sistema.listar_animais()
+            elif opcao == "0":
+                print("Saindo do sistema... 👋")
+                break
+            else:
+                print("❌ Opção inválida!")
