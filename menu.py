@@ -1,21 +1,15 @@
-from Banco import Gerenciador
+from animal import Animal
 
 def mostrar_titulo():
-    """
-    Mostra o título do sistema.
-    """
     print("=" * 40)
     print("   🐶 SISTEMA DE BANCO🐱")
     print("=" * 40)
     print()
 def menu():
-    """
-    Menu principal do sistema, com opções pré-condicionadas por perfil de usuário.
-    """
-    sistema = Gerenciador()
+
+    sistema = Animal()
     perfil = ""
 
-    # Seleção de perfil
     while perfil not in ["admin", "normal"]:
         perfil = input("Digite seu perfil (admin/normal): ").lower().strip()
         if perfil not in ["admin", "normal"]:
@@ -30,7 +24,7 @@ def menu():
         print("0️⃣  Sair")
 
         opcao = input("\n👉 Escolha uma opção: ").strip()
-        # Opções para admin
+      
         if perfil == "admin":
             if opcao == "1":
                 sistema.cadastrar_animal()
@@ -46,7 +40,6 @@ def menu():
             else:
                 print("❌ Opção inválida!")
 
-        # Opções para usuário normal
         else:
             if opcao == "3":
                 sistema.buscar_animal()
@@ -58,7 +51,6 @@ def menu():
             else:
                 print("❌ Opção inválida!")
 
-        # Pergunta para continuar
         if opcao in ["1","2","3","4"]:
             while True:
                 resposta = input("\n Deseja continuar no sistema? (s/n): ").lower().strip()
