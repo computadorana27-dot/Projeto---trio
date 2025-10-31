@@ -45,3 +45,16 @@ def menu():
                 break
             else:
                 print("❌ Opção inválida!")
+                
+        # Opções para usuário normal
+        else:
+            if opcao == "3":
+                sistema.buscar_animal()
+            elif opcao == "4":
+                sistema.listar_animais()
+            elif opcao == "0":
+                print("Saindo do sistema... 👋")
+                break
+            else:
+                print("❌ Opção inválida!")
+
