@@ -20,3 +20,13 @@ def menu():
         perfil = input("Digite seu perfil (admin/normal): ").lower().strip()
         if perfil not in ["admin", "normal"]:
             print("❌ Perfil inválido! Digite 'admin' ou 'normal'.")
+    continuar = True
+    while continuar:
+        mostrar_titulo()
+        print("1️⃣  Cadastrar/Adicionar Animal" if perfil=="admin" else "")
+        print("2️⃣  Remover Animal" if perfil=="admin" else "")
+        print("3️⃣  Buscar Animal")
+        print("4️⃣  Listar Animais")
+        print("0️⃣  Sair")
+
+        opcao = input("\n👉 Escolha uma opção: ").strip()
