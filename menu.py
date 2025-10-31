@@ -45,7 +45,7 @@ def menu():
                 break
             else:
                 print("❌ Opção inválida!")
-                
+
         # Opções para usuário normal
         else:
             if opcao == "3":
@@ -58,3 +58,15 @@ def menu():
             else:
                 print("❌ Opção inválida!")
 
+        # Pergunta para continuar
+        if opcao in ["1","2","3","4"]:
+            while True:
+                resposta = input("\n Deseja continuar no sistema? (s/n): ").lower().strip()
+                if resposta == "s":
+                    break
+                elif resposta == "n":
+                    print("Saindo do sistema...👋")
+                    continuar = False
+                    break
+                else:
+                    print("❌ Opção inválida! Digite 's' ou 'n'.")
